@@ -1,0 +1,22 @@
+[project]
+name = "lowest-price-buyer"
+version = "0.1.0"
+description = "Compare effective prices across Japanese marketplaces"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "requests>=2.31.0",
+  "beautifulsoup4>=4.12.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0"
+]
+
+[project.scripts]
+lowest-price-buyer = "lowest_price_buyer.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
